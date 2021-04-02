@@ -6,7 +6,10 @@ const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado
 TASK 1 🚀
 // The customer would like to see the topping options, console log out each of the toppings one by one in the array above 
 */
-
+toppings.forEach(function(item){
+  //item = topping[i]
+  console.log(item)
+})
 
 /*
 TASK 2 🚀
@@ -15,8 +18,17 @@ for example you no longer have any onions and need to remove it from the list of
 Use .forEach() - hint - you will need to include the index in the callback
  */
 
+function taskTwo(array, item) {
+    let newArray = []
+    array.forEach(function (item) {
+        if (index !== item) {
+            newArayy.push(index);
+        }
 
-
+    })
+    return newArray
+}
+console.log(taskTwo(toppings, 'Bacon')
 /*
 TASK 3 🚀
 // Sort the topping alphabetically and return them in a new array 
@@ -43,20 +55,39 @@ TASK 4 🚀
 // The travel agent would like to send a couple on their honeymoon to a location with a beach and a temperature above 90 degrees. return their options in a new array 
 */
 
+let newVacations = vacations.filter(function(item){
+    return item.temperature > 90 && item.beach === true
+})
 
+console.log(newVacations)
 
+// my answer ::
+// function honeymoon(vaca){
+//     let newHoneymoon = [];
+// for(let i = 0; i < vacations.length; i++);{
+// }if(vacations[i].temperature === vaca) {
+//     return `${vacations[i].temperature}, ${vacations[i].beach}`
+// }
+// }
+// console.log(newHoneymoon())
 /*
 TASK 5 🚀
 // A developer decides to become a digital nomad for a year, they would like to live in a place with strong wifi, a beach, and good hiking, return their options
 */
 
-
+let newPlace = vacations.filter(function(item){
+    return item.wifi === 'strong' && item.beach === true && item.hiking === true
+  
+})
 
 /* 
 TASK 6 🚀
 // write a function that allows a user to sort their vacations by hiking opportunities, beach access or a mix of both and return their options
 */
+let newVaca = vacations.filter(funciton(item){
+    return item.beach === true && item.hiking === true
 
+})
 
 
 /* 
